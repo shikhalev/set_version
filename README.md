@@ -36,4 +36,4 @@ See example in [gemspec](set_version.gemspec).
 
 ## License
 
-* [GNU Library General Public License v3](LICENSE)
+* [GNU Lesser General Public License v3](LICENSE)
