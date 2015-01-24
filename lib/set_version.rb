@@ -7,7 +7,7 @@ class Gem::Specification
 
   SET_VERSION_VERSION = [0, 1]
 
-  def set_version *vers, git: true, message: 'Build #%s<version>'
+  def set_version *vers, git: true, message: 'Build #%<version>s'
 
     if Integer === vers[-1]
       beta = ''
