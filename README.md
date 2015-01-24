@@ -8,6 +8,13 @@ set_version *vers, git: false, message: 'Build #%<version>s'
 
 * `vers` — version numbers: major, minor, patch; and beta-flag — String
   or Symbol like 'alpha', 'beta', 'pre', 'rc' etc.
+* `git:` — named parameter — boolean. If set to `true`, method will check
+  where gemspec is under git control, add `gemvers`-file to git, and commit
+  with `message`.
+* `message:` — template for git commit message, can use named placeholders:
+  * `version` — result full version;
+  * `major`, `minor`, `patch` and `beta` — parameters of calling;
+  * `build` — build number.
 
 ## Usage
 
