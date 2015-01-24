@@ -2,6 +2,8 @@
 
 Make gem version with autoicrement build number.
 
+[![Gem Version](https://badge.fury.io/rb/set_version.svg)](http://badge.fury.io/rb/set_version)
+
 ```Ruby
 set_version *vers, git: false, message: 'Build #%<version>s'
 ```
