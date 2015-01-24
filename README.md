@@ -14,9 +14,9 @@ set_version *vers, git: false, message: 'Build #%<version>s'
   where gemspec is under git control, add `gemvers`-file to git, and commit
   with `message`.
 * `message:` — template for git commit message, can use named placeholders:
-  * `version` — result full version;
-  * `major`, `minor`, `patch` and `beta` — parameters of calling;
-  * `build` — build number.
+  * `:version` — result full version;
+  * `:major`, `:minor`, `:patch` and `:beta` — parameters of calling;
+  * `:build` — build number.
 
 ## Usage
 
