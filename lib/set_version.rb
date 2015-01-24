@@ -31,7 +31,7 @@ class Gem::Specification
     if !stored
       stored = {}
     end
-    build = stored[:build] || 0
+    build = stored[:build] || -1
 
     digest = Digest::SHA1.new
     digest << (File.read s_fn)
