@@ -3,7 +3,7 @@
 Make gem version with autoicrement build number
 
 ```Ruby
-set_version *vers, git: true, message: 'Build #%<version>s'
+set_version *vers, git: false, message: 'Build #%<version>s'
 ```
 
 ## Usage
