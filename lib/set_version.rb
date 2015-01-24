@@ -7,7 +7,7 @@ class Gem::Specification
 
   SET_VERSION_VERSION = [0, 1]
 
-  def set_version *vers
+  def set_version *vers, git: true, message: 'Build #%<version>'
 
     if Integer === vers[-1]
       beta = ''
@@ -58,9 +58,13 @@ class Gem::Specification
     end
     self.version = result
 
-    if system "git ls-files #{s_fn} --error-unmatch > /dev/null 2>&1"
-      system "git add #{v_fn} > /dev/null 2>&1"
-      system "git commit -a -m 'Build ##{result}' > /dev/null 2>&1"
+    if git
+      msg = message % { version: result, major: major, minor: minor,
+                        patch: patch, beta: beta, build: build }
+      if system "git ls-files #{s_fn} --error-unmatch > /dev/null 2>&1"
+        system "git add #{v_fn} > /dev/null 2>&1"
+        system "git commit -a -m '#{msg}' > /dev/null 2>&1"
+      end
     end
 
     return result
