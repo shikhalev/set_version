@@ -2,6 +2,10 @@
 
 Make gem version with autoicrement build number
 
+```Ruby
+set_version *vers, git: true, message: 'Build #%<version>s'
+```
+
 ## Usage
 
 ```Ruby
