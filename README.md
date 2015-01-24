@@ -6,6 +6,9 @@ Make gem version with autoicrement build number
 set_version *vers, git: false, message: 'Build #%<version>s'
 ```
 
+* `vers` — version numbers: major, minor, patch; and beta-flag — String
+  or Symbol like 'alpha', 'beta', 'pre', 'rc' etc.
+
 ## Usage
 
 ```Ruby
@@ -20,4 +23,4 @@ Gem::Specification.new do |g|
 end
 ```
 
-See usage example in [gemspec](set_version.gemspec).
+See example in [gemspec](set_version.gemspec).
