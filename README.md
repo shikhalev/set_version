@@ -33,3 +33,7 @@ end
 ```
 
 See example in [gemspec](set_version.gemspec).
+
+## License
+
+* [GNU Library General Public License v3](LICENSE)
