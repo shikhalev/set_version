@@ -36,7 +36,7 @@ class Gem::Specification
     digest = Digest::SHA1.new
     digest << (File.read s_fn)
     files.each do |f|
-      digest << (File.read f)
+      digest << (File.read f) if File.file? f
     end
 
     if digest.hexdigest != stored[:hash]
