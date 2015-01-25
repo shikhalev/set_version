@@ -14,7 +14,7 @@ Gem::Specification.new do |g|
 
   g.files = [ 'lib/set_version.rb', 'README.md', 'LICENSE' ]
 
-  g.set_version *SET_VERSION_VERSION, git: true
+  g.set_version(*SET_VERSION_VERSION, git: true)
 
   g.require_path = 'lib'
   g.required_ruby_version = '~> 2.0'

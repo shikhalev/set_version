@@ -5,7 +5,7 @@ require 'digest/sha1'
 
 class Gem::Specification
 
-  SET_VERSION_VERSION = [0, 1]
+  SET_VERSION_VERSION = [0, 1, 1]
 
   def set_version *vers, git: false, message: 'Build #%<version>s'
 
