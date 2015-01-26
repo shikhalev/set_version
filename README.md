@@ -3,6 +3,8 @@
 Make gem version with autoicrement build number.
 
 [![Gem Version](https://badge.fury.io/rb/set_version.svg)](http://badge.fury.io/rb/set_version)
+[![GitHub license](https://img.shields.io/badge/license-LGPLv3-orange.svg?style=flat)](https://raw.githubusercontent.com/shikhalev/set_version/master/LICENSE)
+[![Code Climate](https://codeclimate.com/github/shikhalev/set_version/badges/gpa.svg)](https://codeclimate.com/github/shikhalev/set_version)
 
 ```Ruby
 set_version *vers, git: false, message: 'Build #%<version>s'
