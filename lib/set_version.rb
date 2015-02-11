@@ -5,9 +5,9 @@ require 'digest/sha1'
 
 class Gem::Specification
 
-  SET_VERSION_VERSION = [0, 1, 1]
+  SET_VERSION_VERSION = [0, 1, 2]
 
-  def set_version *vers, git: false, message: 'Build #%<version>s'
+  def set_version *vers, git: false, message: 'Build #%<version>s', tag: false
 
     if Integer === vers[-1]
       beta = ''
@@ -64,6 +64,9 @@ class Gem::Specification
       if system "git ls-files #{s_fn} --error-unmatch > /dev/null 2>&1"
         system "git add #{v_fn} > /dev/null 2>&1"
         system "git commit -a -m '#{msg}' > /dev/null 2>&1"
+        if tag
+          system "git tag #{result}"
+        end
       end
     end
 
