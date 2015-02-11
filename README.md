@@ -7,7 +7,7 @@ Make gem version with autoicrement build number.
 [![Code Climate](https://codeclimate.com/github/shikhalev/set_version/badges/gpa.svg)](https://codeclimate.com/github/shikhalev/set_version)
 
 ```Ruby
-set_version *vers, git: false, message: 'Build #%<version>s'
+set_version *vers, git: false, message: 'Build #%<version>s', tag: false
 ```
 
 * `vers` — version numbers: major, minor, patch; and beta-flag — String
@@ -19,6 +19,7 @@ set_version *vers, git: false, message: 'Build #%<version>s'
   * `:version` — result full version;
   * `:major`, `:minor`, `:patch` and `:beta` — parameters of calling;
   * `:build` — build number.
+* `tag:` — if `true` and git enabled it is adding tag named by version.
 
 ## Usage
 
